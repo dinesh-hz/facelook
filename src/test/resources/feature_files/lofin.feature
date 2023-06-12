@@ -1,12 +1,12 @@
-#Feature: facebook login page
+#Feature: Filbkart webappication
 #
-  #Scenario: login to valid data
+  #Scenario: check the Beauty, Toys & More
     #Given user open the prowser and go to url
-    #When user enter the username  "dinesh"
-    #Then user enter the password "dinesh@12345"
+    #When user enter the us book click
+    #Then user enter the password  audio book ciclk
     #And cuser click the login button
     #Then user close is browserrssd
-
+#
   #Scenario: login to invalid data
     #Given user open the prowser and go to url
     #When user enter the username  "kumar"

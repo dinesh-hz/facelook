@@ -1,0 +1,11 @@
+2023-05-04 18:18:11,600 [INFO ] com.step_definitions.singup_page [main] user click the crate button
+2023-05-04 18:18:14,783 [INFO ] com.step_definitions.singup_page [main] user enter the first name
+2023-05-04 18:18:14,910 [INFO ] com.step_definitions.singup_page [main] user enter the surname
+2023-05-04 18:18:18,239 [INFO ] com.step_definitions.singup_page [main] user enter the mail id
+2023-05-04 18:18:18,404 [INFO ] com.step_definitions.singup_page [main] user enter the password
+2023-05-04 18:18:21,624 [INFO ] com.step_definitions.singup_page [main] user enter the mail id
+2023-05-04 18:18:21,954 [INFO ] com.step_definitions.singup_page [main] user enter the data
+2023-05-04 18:18:22,199 [INFO ] com.step_definitions.singup_page [main] user enter the month
+2023-05-04 18:18:22,450 [INFO ] com.step_definitions.singup_page [main] user enter the year
+2023-05-04 18:18:22,633 [INFO ] com.step_definitions.singup_page [main] user selecte the gender
+2023-05-04 18:18:22,826 [INFO ] com.step_definitions.singup_page [main] user clcik the sigin button
