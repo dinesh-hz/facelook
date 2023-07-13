@@ -56,5 +56,7 @@ notes:
 
    # newman run [collection link or clloection file export path] -r junit --reporter-junit-export
 
+   my samle html reportes-https://drive.google.com/file/d/1910SQOVjnT5RopyuoV2XP6zJAXO7lSbb/view?usp=drive_link
+
 
    
