@@ -34,7 +34,7 @@ how many tooles i used and handled in this ?
 
 postman newman html reportes Created my demo project : https://drive.google.com/file/d/1n-9gBcn-eItUyXSVMNgEAC3nEcEFPmcb/view?usp=sharing
 
-postman newman html reportes Created my demo project : https://drive.google.com/file/d/1vM3mpXzxarU6m5w1iYauNP2BvOHmpPtm/view?usp=sharing
+postman newman junit reportes Created my demo project : https://drive.google.com/file/d/1vM3mpXzxarU6m5w1iYauNP2BvOHmpPtm/view?usp=sharing
 
 
 setp:1
