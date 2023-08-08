@@ -19,7 +19,7 @@ how many tooles i used and handled in this ?
   Object-Oriented Programming Concepts
   Maven framework
 
-  what are the type of postman commant?
+  what are the type of postman commant code?
 
      get- status code -200
      post - status code -201
