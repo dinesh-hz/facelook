@@ -2,14 +2,20 @@ package Helpers;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
+import org.junit.AfterClass;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import net.masterthought.cucumber.Configuration;
+import net.masterthought.cucumber.ReportBuilder;
 import utilities.Driver_manger;
 import utilities.Fileread_Manager;
 import utilities.constantss;
@@ -84,6 +90,25 @@ public class Comman_step {
 	
 
 	
-	
+	@AfterClass
+	public static  void generateReport() {
+
+		// Report my location path
+		File f = new File("./target/maven-cucmber-reports");
+		Configuration con = new Configuration(f, "facebook");
+		con.setBuildNumber("012");
+		con.addClassifications("operating system", System.getProperty("os.name").toUpperCase());
+		con.addClassifications("browser", "chrome");
+		con.addClassifications("Environment", "QA");
+		List<String> list = new ArrayList<String>();
+		list.add("./target/cucumber-reports/Cucumber.json");
+		ReportBuilder re = new ReportBuilder(list, con);
+		re.generateReports();
+		
+		
+		
+
+	}
+
 
 }

@@ -6,11 +6,11 @@ Feature: facebook login page
 
   Scenario: crate account
     And user click the  createnewaccount butto
-    Then user close is browserrssd
 
   Scenario Outline: login to invalid data
     Given user open the Browser and go to url
     When user enter the "<username>" and password "<password>"
+  Then user close the browser
 
     Examples: 
       | username | password |

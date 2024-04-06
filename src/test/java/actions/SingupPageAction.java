@@ -61,7 +61,7 @@ public class SingupPageAction extends Bass_Class {
 		
 		wait_class(300);
 		
-		Driver_manger.getDriver().close();
+		Driver_manger.getDriver().quit();
 
 	}
 
