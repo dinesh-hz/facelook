@@ -9,12 +9,10 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.testng.annotations.DataProvider;
 
 public class Excell_data_ftrom_testng {
 
-	@DataProvider(name = "excelldata")
-	public static String[][] getdatas() throws IOException, InvalidFormatException {
+	public static String[][] getdata() throws IOException, InvalidFormatException {
 
 		File file = new File("./src//test//resources//Excelldata//Logindata.xlsx");
 
@@ -28,7 +26,7 @@ public class Excell_data_ftrom_testng {
 
 		int lastCellNum = sheet.getPhysicalNumberOfRows();
 
-		 sheet.getRow(0).getLastCellNum();
+		sheet.getRow(0).getLastCellNum();
 
 		String[][] data = new String[NumberOfRows][lastCellNum];
 

@@ -2,10 +2,7 @@ package Helpers;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 
-import locators.LoginPageLocaters;
-import locators.SingupPageLocaters;
 import utilities.Driver_manger;
 
 public class Hook {
@@ -31,12 +28,12 @@ public class Hook {
 
 	}
 
-	public void initwebelement() {
-
-		PageFactory.initElements(Driver_manger.getDriver(), SingupPageLocaters.class);
-		PageFactory.initElements(Driver_manger.getDriver(), LoginPageLocaters.class);
-
-	}
+//	public void initwebelement() {
+//
+//		PageFactory.initElements(Driver_manger.getDriver(), SingupPageLocaters.class);
+//		PageFactory.initElements(Driver_manger.getDriver(), LoginPageLocaters.class);
+//
+//	}
 
 	
 

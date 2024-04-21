@@ -42,7 +42,6 @@ public class Driver_manger {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
-			// driver.get(URL);
 
 			break;
 

@@ -37,8 +37,12 @@ public class SingupPageAction extends Bass_Class {
 		
 		wait_class(3000);
 
-		
-		singuppagelocater.reentermail.sendKeys(constantss.mailid);
+		try {
+			singuppagelocater.reentermail.sendKeys(constantss.mailid);
+
+		} catch (Exception e) {
+			e.getStackTrace();
+		}
 
 		singuppagelocater.password.sendKeys(constantss.passsowrddd);
 		

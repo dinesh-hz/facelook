@@ -8,19 +8,22 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import utilities.Bass_Class;
 import utilities.constantss;
 
-public class LoginPageDefinitions extends Bass_Class {
+public class LoginPageDefinitions  {
 
 	LoginPageAction objlogin = new LoginPageAction();
 
 	SingupPageAction objsingup = new SingupPageAction();
-
+	
+	
+	
 	@When("user enter the username and password")
 	public void userEnterTheUsernameAndPassword() throws IOException, InterruptedException {
 
 		objlogin.navigatetowebapge();
+		
+		
 
 		objlogin.getMissingUsernameText();
 
@@ -32,7 +35,7 @@ public class LoginPageDefinitions extends Bass_Class {
 
 		objlogin.ClickTheLoginButton();
 
-		wait_class(3000);
+		//wait_class(3000);
 
 	}
 

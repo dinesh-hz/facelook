@@ -1,14 +1,14 @@
 package runners;
 
 
-import org.junit.runner.RunWith;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import io.cucumber.junit.CucumberOptions.SnippetType;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+import io.cucumber.testng.CucumberOptions.SnippetType;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(features = "./src/test/resources/feature_files",
+
+
+@CucumberOptions(features = "./src/test/resources/feature_files/",
 
 		glue = { "StepDefinition",
 				"Helpers" },
@@ -16,22 +16,23 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				monochrome = true, 
 				snippets = SnippetType.CAMELCASE,
 				plugin = { "pretty",
-						"html:target/cucumber-reports/cucumber-pretty.html",
-						"json:target/cucumber-reports/Cucumber.json", 
-						"junit:target/cucumber-reports/Cucumber.xml",
+						"html:target/cucumber-reports/reports.html",
+						"json:target/cucumber-reports/reports.json", 
+						"junit:target/cucumber-reports/reports..xml",
 						"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-						//"de.monochromata.cucumber.report.prettyReports:target/maven-cucmber-reports",
-					//"me.jvt.cucumber.report.PrettyReports:target/maven-cucmber-reports" ,
-
 						"rerun:target/failed_scenarios.txt" }, // just chek failled sceainer faile name
 		publish = true
-// tags = ("@Excell,@shb")
+ //tags = ("@dataprovider")
 
 )
-public class Cucumber_Runner   {
+public class Cucumber_Runner extends AbstractTestNGCucumberTests  {
+	
+
+
 	
 	
-	
+
+
 	
 	
 	

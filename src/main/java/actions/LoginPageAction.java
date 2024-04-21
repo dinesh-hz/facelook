@@ -1,17 +1,27 @@
 package actions;
 
+import java.io.IOException;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import dataprivder.ExcelReader;
 import locators.LoginPageLocaters;
 import utilities.Bass_Class;
 import utilities.Driver_manger;
 import utilities.constantss;
 
-public class LoginPageAction extends Bass_Class {
+public class LoginPageAction  {
+
+	Bass_Class bass =	new Bass_Class();
 
 	LoginPageLocaters loginPageLocators = null;
+	
 
+//inti element pagefactery
+	
+	
 	public LoginPageAction() {
 
 		this.loginPageLocators = new LoginPageLocaters();
@@ -23,7 +33,7 @@ public class LoginPageAction extends Bass_Class {
 	// Get the error message when username is blank
 	public void getMissingUsernameText() throws InterruptedException {
 
-		wait_class(3000);
+		bass.wait_class(3000);
 
 		boolean displayed = loginPageLocators.username.isDisplayed();
 
@@ -41,29 +51,52 @@ public class LoginPageAction extends Bass_Class {
 
 		Assert.assertEquals(enableds, true);
 
-		// loginPageLocators.username.getText();
+	//	StepReport("pass", "this is completety verfiye theusername and testbox");
 
 	}
 
 	// Get the Error Message
 	public String getErrorMessage() throws InterruptedException {
 
-		wait_class(3000);
+		bass.wait_class(3000);
 
 		return loginPageLocators.password.getText();
 	}
 
 	public void navigatetowebapge() throws InterruptedException {
 
-		navigate__URL(constantss.url);
+	//	StepReport("pass", "hai");
+		bass.navigate__URL(constantss.url);
 
-		wait_class(3000);
+		bass.wait_class(3000);
+		
+		
+
+
+	}
+
+	// this is dataprovider fuction
+
+	//@Test(dataProvider = "exceldata", dataProviderClass = Datautiles.class)
+	public void loginfromedataprovider() throws InterruptedException, InvalidFormatException, IOException {
+
+		bass.wait_class(3000);
+
+		String username = ExcelReader.Get_data(0).get(2);
+		// Fill user name
+		loginPageLocators.username.sendKeys(username);   // dineh@gmail.com
+
+
+		String pass = ExcelReader.Get_data(1).get(2);
+
+		// Fill password
+		loginPageLocators.password.sendKeys(pass);  // haidinu@gmal.com
 
 	}
 
 	public void loginfuction(String strUserName, String strPassword) throws InterruptedException {
 
-		wait_class(3000);
+		bass.wait_class(3000);
 
 		// Fill user name
 		loginPageLocators.username.sendKeys(strUserName);
@@ -77,7 +110,7 @@ public class LoginPageAction extends Bass_Class {
 
 	public void ClickTheLoginButton() throws InterruptedException {
 
-		wait_class(3000);
+		bass.wait_class(3000);
 
 		loginPageLocators.login_btn.click();
 

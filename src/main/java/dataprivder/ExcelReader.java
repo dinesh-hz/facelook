@@ -13,6 +13,7 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Test;
 
 public class ExcelReader {
 
@@ -53,7 +54,6 @@ public class ExcelReader {
 		return excelRows;
 
 	}
-
 	public static LinkedList<String> Get_data(Integer row) throws IOException, InvalidFormatException {
 
 		String username = ExcelReader.ReadDoument().get(row).get("username");
@@ -69,5 +69,12 @@ public class ExcelReader {
 		return linkedList;
 
 	}
+//  @Test
+//  public static void hai() throws InvalidFormatException, IOException {
+//	  
+//	 String string = Get_data(3).get(1);
+//	
+//	  System.out.println(string);
+//  }
 
 }

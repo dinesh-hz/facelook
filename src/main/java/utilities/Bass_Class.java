@@ -19,17 +19,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Bass_Class extends Driver_manger {
 
-	// public static Driver_manger driver;
+	// public  Driver_manger driver;
 
-//	public static WebDriver driver;
-//
-//	public static WebDriver getDriver() {
-//		return driver;
-//	}s
-	
+	//	public  WebDriver driver;
+	//
+	//	public  WebDriver getDriver() {
+	//		return driver;
+	//	}s
+
 	public WebDriverWait wait ;
 
-	public static void clickingOnwebElement(WebElement element, long waittimesecond) {
+	public  void clickingOnwebElement(WebElement element, long waittimesecond) {
 
 		WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(waittimesecond));
 
@@ -40,7 +40,7 @@ public class Bass_Class extends Driver_manger {
 		elements.click();
 	}
 
-	public static void selecte_class(WebElement webelement, String selecte_type, String select_value) {
+	public  void selecte_class(WebElement webelement, String selecte_type, String select_value) {
 
 		Select select = new Select(webelement);
 
@@ -71,7 +71,7 @@ public class Bass_Class extends Driver_manger {
 
 	}
 
-	public static void mouseHoverAndClickElemnt(WebElement web_movelelemnt) {
+	public  void mouseHoverAndClickElemnt(WebElement web_movelelemnt) {
 
 		Actions actions = new Actions(getDriver());
 
@@ -79,14 +79,14 @@ public class Bass_Class extends Driver_manger {
 
 	}
 
-	public static void Actions_class(WebDriver driver, WebElement drag_element, WebElement Drop_element) {
+	public  void Actions_class(WebDriver driver, WebElement drag_element, WebElement Drop_element) {
 
 		Actions actions = new Actions(driver);
 
 		actions.dragAndDrop(drag_element, Drop_element).perform();
 	}
 
-	public static void navigate_class(String type) {
+	public  void navigate_class(String type) {
 
 		switch (type) {
 		case "back":
@@ -109,13 +109,13 @@ public class Bass_Class extends Driver_manger {
 
 	}
 
-	public static void navigate__URL(String url) {
+	public  void navigate__URL(String url) {
 
 		getDriver().navigate().to(url);
 
 	}
 
-	public static WebElement locater_Element(String locater_type, String locater_path) {
+	public  WebElement locater_Element(String locater_type, String locater_path) {
 
 		switch (locater_type) {
 
@@ -150,13 +150,13 @@ public class Bass_Class extends Driver_manger {
 
 	}
 
-	public static void frame_class(Integer type) {
+	public  void frame_class(Integer type) {
 
 		getDriver().switchTo().frame(type);
 
 	}
 
-	public static void alert_class(String type) {
+	public  void alert_class(String type) {
 
 		switch (type) {
 
@@ -173,24 +173,24 @@ public class Bass_Class extends Driver_manger {
 
 	}
 
-	public static void alert_sendkey() {
+	public  void alert_sendkey() {
 
 		getDriver().switchTo().alert().accept();
 
 	}
 
-	public static  void wait_class(long waittimesecond) throws InterruptedException {
-		
+	public   void wait_class(long waittimesecond) throws InterruptedException {
+
 		Thread.sleep(waittimesecond);
 
-	//WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(waittimesecond));
-//	 wait.until(ExpectedConditions+
-	
-	//return wait;
+		//WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(waittimesecond));
+		//	 wait.until(ExpectedConditions+
+
+		//return wait;
 
 	}
 
-	public static void sendkey_Element(WebElement elementname, String key) {
+	public  void sendkey_Element(WebElement elementname, String key) {
 
 		elementname.click();
 		//elementname.clear();
@@ -198,7 +198,7 @@ public class Bass_Class extends Driver_manger {
 
 	}
 
-	public static String selenium_class(WebElement element_name, String type_method) {
+	public  String selenium_class(WebElement element_name, String type_method) {
 
 		switch (type_method) {
 		case "clear":
@@ -228,7 +228,7 @@ public class Bass_Class extends Driver_manger {
 
 	}
 
-	public static void screen_Full_shot(WebDriver driver_Name, String location_url) throws IOException {
+	public  void screen_Full_shot(WebDriver driver_Name, String location_url) throws IOException {
 
 		TakesScreenshot a = (TakesScreenshot) driver_Name;
 
@@ -240,7 +240,7 @@ public class Bass_Class extends Driver_manger {
 
 	}
 
-	public static void screen_Crop_shot(WebElement element_Name, String location_url) throws IOException {
+	public  void screen_Crop_shot(WebElement element_Name, String location_url) throws IOException {
 
 		File get = element_Name.getScreenshotAs(OutputType.FILE);
 
@@ -250,7 +250,7 @@ public class Bass_Class extends Driver_manger {
 
 	}
 
-	public static void Scroll_Screen_class(WebDriver driver_name, WebElement element_name) {
+	public  void Scroll_Screen_class(WebDriver driver_name, WebElement element_name) {
 
 		JavascriptExecutor scr = (JavascriptExecutor) driver_name;
 
@@ -258,7 +258,7 @@ public class Bass_Class extends Driver_manger {
 
 	}
 
-	public static void close_app(WebDriver driver_name, String close_type) {
+	public  void close_app(WebDriver driver_name, String close_type) {
 
 		switch (close_type) {
 
@@ -277,13 +277,13 @@ public class Bass_Class extends Driver_manger {
 
 	}
 
-	public static String window_handle() {
+	public  String window_handle() {
 
 		return getDriver().getWindowHandle();
 
 	}
 
-	public static Set<String> allwindow() {
+	public  Set<String> allwindow() {
 
 		return getDriver().getWindowHandles();
 
